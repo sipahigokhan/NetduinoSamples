@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bilge Adam Netduino Web Client</title>
+</head>
+<body>
+    <button id="1" class="command">Blink Enabled</button>
+    <button id="2" class="command">Blink Disabled</button>
+    <button id="3" class="command">Sequential Light</button>
+</body>
+</html>
+
+<script src="Scripts/jquery-2.1.3.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".command").click(function () {
+            var commandId = $(this).attr('id');
+            $.get("http://10.12.10.46:80/", { command: commandId });
+        });
+    });
+</script>

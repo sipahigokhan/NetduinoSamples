@@ -1,0 +1,2 @@
+D:\Source\Demo\Netduino\NodejsWebApp_Demo06_NodeJS\NodejsWebApp_Demo06_NodeJS\obj\Debug\NodejsWebApp_Demo06_NodeJS.njsprojResolveAssemblyReference.cache
+D:\Source\Demo\Netduino\NodejsWebApp_Demo06_NodeJS\NodejsWebApp_Demo06_NodeJS\bin\Microsoft.NodejsTools.WebRole.dll

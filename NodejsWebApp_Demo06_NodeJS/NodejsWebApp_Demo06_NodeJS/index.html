@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bilge Adam Netduino NodeJS Client</title>
+</head>
+<body>
+
+    <table border="1" cellspacing="20" style="margin-left:50px;margin-top:50px;">
+        <tr>
+            <td firstcommand="10" secondcommand="20" height="80px" width="80px"></td>
+            <td firstcommand="11" secondcommand="21" height="80px" width="80px"></td>
+            <td firstcommand="12" secondcommand="22" height="80px" width="80px"></td>
+            <td firstcommand="13" secondcommand="23" height="80px" width="80px"></td>
+        </tr>
+        <tr>
+            <td firstcommand="14" secondcommand="24" height="80px" width="80px"></td>
+            <td firstcommand="15" secondcommand="25" height="80px" width="80px"></td>
+            <td firstcommand="16" secondcommand="26" height="80px" width="80px"></td>
+            <td firstcommand="17" secondcommand="27" height="80px" width="80px"></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<script src="https://cdn.socket.io/socket.io-1.2.1.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    var socket = io();
+    $(document).ready(function () {
+        $("table td").mouseout(function () {
+            var commandId = $(this).attr('secondcommand');
+            socket.emit('command', commandId);
+        });
+
+        $("table td").mouseover(function () {
+            var commandId = $(this).attr('firstcommand');
+            socket.emit('command', commandId);
+        });
+    });
+</script>

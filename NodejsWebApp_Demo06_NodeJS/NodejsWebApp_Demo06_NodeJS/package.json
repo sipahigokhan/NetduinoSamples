@@ -1,0 +1,10 @@
+{
+  "name": "NodejsWebApp_Demo06_NodeJS",
+  "version": "0.0.0",
+  "description": "NodejsWebApp_Demo06_NodeJS",
+  "main": "app.js",
+  "author": {
+    "name": "gokhan.sipahi",
+    "email": ""
+  }
+}
