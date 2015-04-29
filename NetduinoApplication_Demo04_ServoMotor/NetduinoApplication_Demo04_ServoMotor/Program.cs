@@ -6,7 +6,6 @@ using Microsoft.SPOT;
 using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.Netduino;
-using System.Random;
 
 
 namespace NetduinoApplication_Demo04_ServoMotor
@@ -35,10 +34,7 @@ namespace NetduinoApplication_Demo04_ServoMotor
         {
             if (data2 == 0)
             {
-                Random rnd = new Random();
-                var sayi = rnd.R
-                andom(0, 51);
-                currentPosition += sayi;
+                currentPosition += 30;
                 SetServoPosition(currentPosition);
             }
         }
